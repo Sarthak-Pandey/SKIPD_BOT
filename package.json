@@ -1,0 +1,34 @@
+{
+  "name": "skipd-bot",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "test": "npx tsx test-10-required-questions.ts",
+    "test:qa": "npx tsx test-10-required-questions.ts && npx tsx test-failure-and-abuse.ts",
+    "test:all": "node validate-knowledge.js && npx tsx test-guardrails.ts && npx tsx test-faq-module.ts && npx tsx test-recommendations.ts && npx tsx test-handoff.ts && npx tsx test-10-required-questions.ts && npx tsx test-failure-and-abuse.ts && npx tsx test-shopify-integration.ts",
+    "shopify:build": "npx @shopify/cli app build --path shopify-app",
+    "shopify:dev": "npx @shopify/cli app dev --path shopify-app"
+  },
+  "dependencies": {
+    "groq-sdk": "^1.6.0",
+    "next": "16.4.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/turbopack": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.0",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
+
+

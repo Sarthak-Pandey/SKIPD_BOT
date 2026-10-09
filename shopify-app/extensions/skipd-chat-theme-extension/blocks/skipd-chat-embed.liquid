@@ -1,0 +1,68 @@
+{% comment %}
+  SKIPD Customer Support Chat Embed Block
+  Injects the floating SKIPD chat assistant into the Shopify storefront.
+  Merchant can enable/disable, configure the backend API endpoint, custom greeting, and position.
+{% endcomment %}
+
+<div
+  id="skipd-chat-root"
+  data-api-base-url="{{ block.settings.api_base_url | default: 'http://localhost:3000' }}"
+  data-launcher-text="{{ block.settings.launcher_text | default: 'Chat with SKIPD' }}"
+  data-greeting="{{ block.settings.greeting_message | escape | default: "Hello! Welcome to SKIPD. We're here to help you skip the steps and keep the skin. How can we help you simplify your routine today?" }}"
+  data-position="{{ block.settings.position | default: 'bottom-right' }}"
+  data-primary-color="{{ block.settings.primary_color | default: '#3C0C1C' }}"
+  data-accent-color="{{ block.settings.accent_color | default: '#FFE6A9' }}"
+></div>
+
+{{ 'skipd-chat-widget.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'skipd-chat-widget.js' | asset_url }}" defer></script>
+
+{% schema %}
+{
+  "name": "SKIPD Support Chat",
+  "target": "body",
+  "settings": [
+    {
+      "type": "text",
+      "id": "api_base_url",
+      "label": "SKIPD Backend API URL",
+      "default": "http://localhost:3000",
+      "info": "URL of the Next.js POST /api/chat backend (e.g. http://localhost:3000 or production HTTPS URL)"
+    },
+    {
+      "type": "text",
+      "id": "launcher_text",
+      "label": "Launcher Button Text",
+      "default": "Chat with SKIPD"
+    },
+    {
+      "type": "textarea",
+      "id": "greeting_message",
+      "label": "Initial Welcome Message",
+      "default": "Hello! Welcome to SKIPD. We're here to help you skip the steps and keep the skin. How can we help you simplify your routine today?"
+    },
+    {
+      "type": "select",
+      "id": "position",
+      "label": "Widget Position",
+      "options": [
+        { "value": "bottom-right", "label": "Bottom Right" },
+        { "value": "bottom-left", "label": "Bottom Left" }
+      ],
+      "default": "bottom-right"
+    },
+    {
+      "type": "color",
+      "id": "primary_color",
+      "label": "Primary Brand Color",
+      "default": "#3C0C1C"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent Color",
+      "default": "#FFE6A9"
+    }
+  ]
+}
+{% endschema %}

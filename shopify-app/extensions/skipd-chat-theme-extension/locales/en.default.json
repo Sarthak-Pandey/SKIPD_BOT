@@ -1,0 +1,10 @@
+{
+  "chat_widget": {
+    "name": "SKIPD Support Chat",
+    "open_chat": "Chat with SKIPD",
+    "close_chat": "Close chat window",
+    "input_placeholder": "Ask about products, routine, shipping...",
+    "send_button": "Send message",
+    "disclaimer": "Development prototype session · Responses grounded in official SKIPD facts"
+  }
+}

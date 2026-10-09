@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFDF7"/>
+      <stop offset="100%" stop-color="#FFE6A9"/>
+    </linearGradient>
+    <linearGradient id="stick" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE6A9"/>
+      <stop offset="50%" stop-color="#FFD77A"/>
+      <stop offset="100%" stop-color="#F2B84B"/>
+    </linearGradient>
+    <linearGradient id="cap" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3C0C1C"/>
+      <stop offset="100%" stop-color="#5A152C"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="400" rx="24" fill="url(#bg)"/>
+
+  <!-- Sun Rays Graphic -->
+  <circle cx="200" cy="180" r="110" fill="none" stroke="#FFE6A9" stroke-width="2" stroke-dasharray="6,6"/>
+  <circle cx="200" cy="180" r="95" fill="none" stroke="#FFD77A" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Morning Sun Badge -->
+  <circle cx="200" cy="90" r="28" fill="#FFD77A" opacity="0.85"/>
+  <circle cx="200" cy="90" r="22" fill="#FFE6A9"/>
+
+  <!-- Stick Product Body -->
+  <g transform="translate(155, 120)">
+    <!-- Main Stick Body -->
+    <rect x="0" y="50" width="90" height="150" rx="14" fill="url(#stick)" stroke="#3C0C1C" stroke-width="3"/>
+    <!-- Stick Base Dial -->
+    <rect x="5" y="180" width="80" height="18" rx="6" fill="#3C0C1C"/>
+    <line x1="20" y1="189" x2="70" y2="189" stroke="#FFE6A9" stroke-width="2"/>
+    <!-- Stick Cap (Slid up slightly for aesthetic) -->
+    <rect x="2" y="10" width="86" height="70" rx="12" fill="url(#cap)" stroke="#FFE6A9" stroke-width="2"/>
+    <text x="45" y="52" fill="#FFE6A9" font-family="serif" font-size="11" font-weight="bold" text-anchor="middle" letter-spacing="2">SKIPD</text>
+    <!-- Label on body -->
+    <text x="45" y="130" fill="#3C0C1C" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">GLOWSCREEN</text>
+    <text x="45" y="148" fill="#3C0C1C" font-family="sans-serif" font-size="9" text-anchor="middle" opacity="0.85">SPF 50+ · MORNING</text>
+    <text x="45" y="162" fill="#3C0C1C" font-family="sans-serif" font-size="8" text-anchor="middle" opacity="0.75">GLOW STICK</text>
+  </g>
+
+  <!-- Product Tag and Disclaimer -->
+  <rect x="40" y="330" width="320" height="42" rx="10" fill="#FFFFFF" stroke="#3C0C1C" stroke-width="1.2" opacity="0.95"/>
+  <text x="200" y="348" fill="#3C0C1C" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Glowscreen · ₹1,500</text>
+  <text x="200" y="362" fill="#6B3444" font-family="sans-serif" font-size="9" text-anchor="middle">DEMO PLACEHOLDER · FOR DEVELOPMENT TESTING ONLY</text>
+</svg>

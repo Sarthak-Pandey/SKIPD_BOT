@@ -1,0 +1,194 @@
+[
+  {
+    "id": "faq-shipping-01",
+    "category": "Shipping and Delivery",
+    "question": "How long will it take for my order to be delivered?",
+    "answer": "Standard delivery across India typically takes [X–Y business days] depending on your pin code. Our team can confirm the exact delivery window for your location.",
+    "keywords": ["shipping", "delivery", "timelines", "delivery time", "how long", "courier", "arrival"],
+    "requiresHandoff": true
+  },
+  {
+    "id": "faq-tracking-02",
+    "category": "Order Tracking",
+    "question": "How can I track my order?",
+    "answer": "Once your order is dispatched, a tracking notification will be shared via [tracking link / SMS / email]. If you need an immediate status update on an existing order, our team can verify it for you.",
+    "keywords": ["order tracking", "track order", "tracking link", "shipment status", "where is my order", "awb"],
+    "requiresHandoff": true
+  },
+  {
+    "id": "faq-returns-03",
+    "category": "Returns and Refunds",
+    "question": "What is your return and refund policy?",
+    "answer": "We offer a [X-day return window] for eligible items in accordance with our return guidelines. For damaged items or specific refund requests, a support specialist will review your details directly.",
+    "keywords": ["returns", "refunds", "return policy", "money back", "exchange", "damaged item"],
+    "requiresHandoff": true
+  },
+  {
+    "id": "faq-payment-04",
+    "category": "Payment Methods and COD",
+    "question": "Do you offer Cash on Delivery (COD) and which payment methods are accepted?",
+    "answer": "We support standard digital payments and [available payment methods / COD policy]. For specific confirmation on Cash on Delivery availability for your pin code, our support team can assist you.",
+    "keywords": ["cod", "cash on delivery", "payment methods", "upi", "credit card", "debit card", "net banking"],
+    "requiresHandoff": true
+  },
+  {
+    "id": "faq-glowscreen-05",
+    "category": "Glowscreen Usage",
+    "question": "What is Glowscreen and how do I use it?",
+    "answer": "Glowscreen is an SPF 50+ multifunctional morning glow stick designed to combine hydration, sun protection, and a healthy glow, replacing separate moisturiser and sunscreen steps. Glide it smoothly over clean skin in the morning as your all-in-one daytime step.",
+    "keywords": ["glowscreen", "glow stick", "spf 50", "morning stick", "how to use glowscreen", "application"],
+    "requiresHandoff": false
+  },
+  {
+    "id": "faq-moonscreen-06",
+    "category": "Moonscreen Usage",
+    "question": "What is Moonscreen and how do I use it?",
+    "answer": "Moonscreen is an overnight recovery balm formulated for barrier repair and recovery while smoothing the appearance of fine lines. Apply it to cleansed skin in the evening before sleeping.",
+    "keywords": ["moonscreen", "recovery balm", "overnight balm", "fine lines", "barrier repair", "night routine"],
+    "requiresHandoff": false
+  },
+  {
+    "id": "faq-moisturiser-07",
+    "category": "Product Functionality",
+    "question": "Does Glowscreen replace my moisturiser and sunscreen?",
+    "answer": "Yes. Glowscreen is specifically designed to combine hydration, SPF 50+ sun protection, and a healthy glow, replacing separate toner, serum, moisturiser, and sunscreen steps.",
+    "keywords": ["replace moisturiser", "replace sunscreen", "all in one", "toner replacement", "serum replacement", "hydration"],
+    "requiresHandoff": false
+  },
+  {
+    "id": "faq-routine-08",
+    "category": "Morning and Night Routines",
+    "question": "What does a complete SKIPD routine look like?",
+    "answer": "A complete routine is simple: cleanse and glide on Glowscreen (SPF 50+) in the morning for hydration and sun defense; cleanse and apply Moonscreen at night for overnight barrier recovery and line smoothing.",
+    "keywords": ["routine", "morning routine", "night routine", "skipcare steps", "skincare regimen", "am pm"],
+    "requiresHandoff": false
+  },
+  {
+    "id": "faq-recommendations-09",
+    "category": "Product Recommendations",
+    "question": "Which SKIPD products should I get started with?",
+    "answer": "SKIPD is designed as a streamlined two-step system: Glowscreen for morning hydration and SPF 50+ protection, and Moonscreen for nighttime barrier repair and recovery. Together, they cover your daily skincare needs.",
+    "keywords": ["recommendation", "which product", "getting started", "starter routine", "best product"],
+    "requiresHandoff": false
+  },
+  {
+    "id": "faq-oily-travel-10",
+    "category": "Oily Skin and Frequent Travel",
+    "question": "Are SKIPD products suitable for oily skin and frequent travelers?",
+    "answer": "SKIPD products are engineered in solid stick and balm formats built for warm climates and on-the-go use without messy layering. Because individual oil-control tolerance can vary, patch testing is recommended.",
+    "keywords": ["oily skin", "travel", "travel friendly", "frequent travel", "humidity", "greasy skin"],
+    "requiresHandoff": false
+  },
+  {
+    "id": "faq-retinol-11",
+    "category": "Retinol Compatibility",
+    "question": "Can I use Glowscreen or Moonscreen with retinol or prescription actives?",
+    "answer": "Compatibility with separate retinol or prescription active treatments has not been officially verified. We advise consulting your dermatologist or speaking with our team before combining them.",
+    "keywords": ["retinol", "tretinoin", "actives", "compatibility", "layering actives", "aha", "bha"],
+    "requiresHandoff": true
+  },
+  {
+    "id": "faq-ingredients-12",
+    "category": "Ingredients",
+    "question": "Where can I see the full ingredient list for Glowscreen and Moonscreen?",
+    "answer": "Full INCI ingredient lists have not been publicly published on our website yet. Our support team can provide verified formulation information upon request.",
+    "keywords": ["ingredients", "ingredient list", "inci", "formula", "chemicals", "fragrance"],
+    "requiresHandoff": true
+  },
+  {
+    "id": "faq-travel-13",
+    "category": "Travel and Cabin-Friendliness",
+    "question": "Can I carry Glowscreen and Moonscreen in my flight cabin luggage?",
+    "answer": "Yes. Both Glowscreen and Moonscreen are solid stick and balm formats, making them mess-free, spill-proof, and convenient for travel and airline cabin bags.",
+    "keywords": ["cabin luggage", "flight", "airplane", "tsa", "solid stick", "leak proof", "travel size"],
+    "requiresHandoff": false
+  },
+  {
+    "id": "faq-pregnancy-14",
+    "category": "Pregnancy and Nursing",
+    "question": "Are SKIPD products safe to use during pregnancy or breastfeeding?",
+    "answer": "Pregnancy and nursing safety has not been officially verified. We strongly recommend consulting your healthcare provider or OB-GYN before using any new skincare products.",
+    "keywords": ["pregnancy", "pregnant", "breastfeeding", "nursing", "safe for pregnancy", "maternity"],
+    "requiresHandoff": true
+  },
+  {
+    "id": "faq-reaction-15",
+    "category": "Skin Reactions",
+    "question": "What should I do if I experience irritation or a reaction after using a product?",
+    "answer": "Please discontinue use immediately and rinse your skin with cool water. Contact our team right away with details so a specialist can assist you, and consult a doctor if irritation persists.",
+    "keywords": ["skin reaction", "irritation", "allergy", "redness", "breakout", "burning", "rash"],
+    "requiresHandoff": true
+  },
+  {
+    "id": "faq-fairness-16",
+    "category": "Fairness and Skin-Lightening Claims",
+    "question": "Do SKIPD products lighten skin or promote fairness?",
+    "answer": "No. SKIPD does not make fairness or skin-lightening claims. Glowscreen provides daily hydration, SPF 50+ defense, and a healthy glow, while Moonscreen supports barrier repair and smooths fine lines.",
+    "keywords": ["fairness", "skin lightening", "whitening", "bleaching", "skin tone", "glow vs fairness", "fairer", "fair"],
+    "requiresHandoff": false
+  },
+  {
+    "id": "faq-clinical-17",
+    "category": "Clinical Evidence",
+    "question": "Has SKIPD published clinical trial reports or dermatological study data?",
+    "answer": "Specific clinical test documentation and lab trial data have not been publicly published at this time. Our team can share verified testing details once officially released.",
+    "keywords": ["clinical evidence", "clinical trials", "dermatologist tested", "lab reports", "spf test", "efficacy data"],
+    "requiresHandoff": true
+  },
+  {
+    "id": "faq-sweatproof-18",
+    "category": "Sweat-Proof Claims",
+    "question": "Is Glowscreen sweat-proof or water-resistant?",
+    "answer": "Specific sweat-proof or water-resistance ratings have not been officially verified. Reapplying sun protection after heavy sweating or water exposure is recommended, and our team can clarify usage details.",
+    "keywords": ["sweat-proof", "water-resistant", "swimming", "sports", "humidity proof", "waterproof"],
+    "requiresHandoff": true
+  },
+  {
+    "id": "faq-layering-19",
+    "category": "Using with Other Products",
+    "question": "Can I layer SKIPD sticks with my existing skincare or makeup?",
+    "answer": "SKIPD sticks are engineered to eliminate unnecessary layering by replacing multiple steps. While they can be paired with your regular cleanser or makeup, compatibility with external active serums has not been verified.",
+    "keywords": ["layering", "other products", "makeup", "cleanser", "foundation", "combining skincare"],
+    "requiresHandoff": false
+  },
+  {
+    "id": "faq-discounts-20",
+    "category": "Discounts and Promo Codes",
+    "question": "Are there any promo codes or discounts available on SKIPD products?",
+    "answer": "Promotional offers and coupons vary per campaign under [current promotional offer]. Please check our official website or contact support for the latest valid offers.",
+    "keywords": ["discounts", "promo codes", "coupon", "voucher", "sale", "offers"],
+    "requiresHandoff": true
+  },
+  {
+    "id": "faq-philosophy-21",
+    "category": "Brand Philosophy",
+    "question": "What is Skipcare and why did SKIPD create it?",
+    "answer": "Skipcare is skincare built around fewer but smarter products. SKIPD was founded to replace unrealistic 10-step routines with multifunctional sticks formulated for real life, Indian heat, and Indian skin.",
+    "keywords": ["skipcare", "philosophy", "why skipd", "brand story", "jain sisters", "fewer products"],
+    "requiresHandoff": false
+  },
+  {
+    "id": "faq-complaint-22",
+    "category": "Customer Support and Disputes",
+    "question": "I have an issue with my order or would like to speak to a representative. How do I get help?",
+    "answer": "We are here to help. You can reach our support team directly at info@skipd.in, and a representative will assist you with order inquiries, delivery updates, or product concerns.",
+    "keywords": ["support", "help", "complaint", "human agent", "talk to human", "representative", "contact"],
+    "requiresHandoff": true
+  },
+  {
+    "id": "faq-sensitive-23",
+    "category": "Sensitive Skin",
+    "question": "Is SKIPD suitable for eczema, rosacea, or extremely sensitive skin?",
+    "answer": "Specific suitability claims for conditions like eczema or rosacea have not been clinically verified. We advise performing a patch test and consulting your dermatologist before introducing new products.",
+    "keywords": ["sensitive skin", "eczema", "rosacea", "allergy prone", "dermatitis"],
+    "requiresHandoff": true
+  },
+  {
+    "id": "faq-refund-dispute-24",
+    "category": "Returns and Refunds",
+    "question": "My order arrived damaged or incorrect. How do I get an exchange or refund?",
+    "answer": "We apologize for the inconvenience. Please send your order number and photos of the damaged package to info@skipd.in so our team can immediately process an exchange or refund under our [damaged item policy].",
+    "keywords": ["damaged package", "broken item", "wrong item", "refund dispute", "exchange request"],
+    "requiresHandoff": true
+  }
+]

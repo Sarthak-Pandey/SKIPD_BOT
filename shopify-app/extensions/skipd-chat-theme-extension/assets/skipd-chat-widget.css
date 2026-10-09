@@ -1,0 +1,638 @@
+/* ==========================================================================
+   SKIPD Customer Support Chat Widget — Theme App Extension Stylesheet
+   Designed for Shopify Online Store Theme Embeds
+   Brand Palette:
+   - Deep Burgundy: #3C0C1C
+   - Buttercream / Pale Gold: #FFE6A9
+   - Warm Ivory: #FFF8E7
+   - Text Primary: #2B1810
+   ========================================================================== */
+
+:root {
+  --skipd-primary: #3C0C1C;
+  --skipd-primary-hover: #2B0813;
+  --skipd-accent: #FFE6A9;
+  --skipd-accent-light: #FFF8E7;
+  --skipd-text-dark: #2B1810;
+  --skipd-border: rgba(60, 12, 28, 0.18);
+  --skipd-radius-lg: 18px;
+  --skipd-radius-sm: 8px;
+  --skipd-font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Animations */
+@keyframes skipdFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes skipdBounce {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+
+@keyframes skipdPulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+/* Base Widget Container */
+.skipd-chat-widget-root {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 2147483000;
+  font-family: var(--skipd-font-sans);
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+.skipd-chat-widget-root.skipd-pos-left {
+  right: auto;
+  left: 24px;
+}
+
+.skipd-chat-widget-root * {
+  box-sizing: border-box;
+}
+
+/* Floating Launcher Button */
+.skipd-launcher-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  background-color: var(--skipd-primary);
+  color: var(--skipd-accent);
+  border: 1.5px solid rgba(255, 230, 169, 0.4);
+  border-radius: 9999px;
+  box-shadow: 0 10px 25px -5px rgba(60, 12, 28, 0.35), 0 8px 10px -6px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s ease, background-color 0.2s ease;
+  user-select: none;
+}
+
+.skipd-launcher-btn:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 14px 28px -4px rgba(60, 12, 28, 0.45);
+  background-color: var(--skipd-primary-hover);
+}
+
+.skipd-launcher-btn:active {
+  transform: translateY(1px) scale(0.97);
+}
+
+.skipd-launcher-btn:focus-visible {
+  outline: 3px solid var(--skipd-primary);
+  outline-offset: 2px;
+}
+
+.skipd-launcher-avatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: var(--skipd-accent);
+  color: var(--skipd-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Georgia, serif;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1;
+}
+
+.skipd-launcher-text {
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+}
+
+.skipd-launcher-icon {
+  width: 18px;
+  height: 18px;
+  color: var(--skipd-accent);
+}
+
+/* Chat Window Modal */
+.skipd-chat-window {
+  display: flex;
+  flex-direction: column;
+  width: 390px;
+  max-width: calc(100vw - 32px);
+  height: 560px;
+  max-height: calc(85vh - 32px);
+  background-color: var(--skipd-accent-light);
+  border: 1px solid var(--skipd-border);
+  border-radius: var(--skipd-radius-lg);
+  box-shadow: 0 20px 40px -8px rgba(30, 5, 12, 0.35), 0 10px 20px -5px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  animation: skipdFadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Header */
+.skipd-chat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background-color: var(--skipd-primary);
+  color: var(--skipd-accent-light);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  user-select: none;
+}
+
+.skipd-header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.skipd-header-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--skipd-accent);
+  color: var(--skipd-primary);
+  font-family: Georgia, serif;
+  font-weight: 700;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.skipd-header-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.skipd-header-title-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.skipd-header-title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--skipd-accent-light);
+  letter-spacing: -0.2px;
+}
+
+.skipd-online-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #34d399;
+  display: inline-block;
+  animation: skipdPulse 2s infinite ease-in-out;
+}
+
+.skipd-demo-badge {
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 1px 5px;
+  border-radius: 4px;
+  background-color: rgba(255, 230, 169, 0.2);
+  color: var(--skipd-accent);
+  letter-spacing: 0.5px;
+}
+
+.skipd-header-subtitle {
+  margin: 0;
+  font-size: 11px;
+  color: rgba(255, 230, 169, 0.85);
+  font-weight: 400;
+}
+
+.skipd-close-btn {
+  background: transparent;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  color: rgba(255, 248, 231, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.skipd-close-btn:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+}
+
+.skipd-close-btn:focus-visible {
+  outline: 2px solid var(--skipd-accent);
+}
+
+/* Conversation Body */
+.skipd-chat-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 14px 14px 8px 14px;
+  background-color: var(--skipd-accent-light);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Message Rows */
+.skipd-msg-row {
+  display: flex;
+  width: 100%;
+  animation: skipdFadeIn 0.2s ease-out forwards;
+}
+
+.skipd-msg-row.skipd-msg-user-row {
+  justify-content: flex-end;
+}
+
+.skipd-msg-row.skipd-msg-assistant-row {
+  justify-content: flex-start;
+}
+
+.skipd-msg-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 84%;
+}
+
+.skipd-msg-wrapper.skipd-wide {
+  max-width: 96%;
+  width: 96%;
+}
+
+.skipd-msg-bubble {
+  padding: 10px 14px;
+  border-radius: 16px;
+  font-size: 13.5px;
+  line-height: 1.45;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.skipd-msg-bubble-user {
+  background-color: var(--skipd-primary);
+  color: var(--skipd-accent-light);
+  border-bottom-right-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.skipd-msg-bubble-assistant {
+  background-color: #ffffff;
+  color: var(--skipd-text-dark);
+  border: 1px solid var(--skipd-border);
+  border-bottom-left-radius: 3px;
+  box-shadow: 0 1px 3px rgba(60, 12, 28, 0.05);
+}
+
+.skipd-msg-time {
+  font-size: 10px;
+  color: rgba(60, 12, 28, 0.5);
+  margin-top: 3px;
+  padding: 0 4px;
+  user-select: none;
+}
+
+.skipd-msg-user-row .skipd-msg-time {
+  text-align: right;
+}
+
+/* Support Handoff Pathway Badge & Form */
+.skipd-handoff-section {
+  margin-top: 6px;
+  width: 100%;
+}
+
+.skipd-handoff-banner {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background-color: rgba(255, 230, 169, 0.6);
+  border: 1px solid rgba(60, 12, 28, 0.12);
+  color: var(--skipd-primary);
+  font-size: 11px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.skipd-handoff-card {
+  background-color: #ffffff;
+  border: 1px solid var(--skipd-border);
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0 2px 6px rgba(60, 12, 28, 0.06);
+}
+
+.skipd-handoff-card h4 {
+  margin: 0 0 6px 0;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--skipd-primary);
+}
+
+.skipd-handoff-group {
+  margin-bottom: 8px;
+}
+
+.skipd-handoff-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--skipd-primary);
+  margin-bottom: 2px;
+}
+
+.skipd-handoff-input {
+  width: 100%;
+  padding: 6px 9px;
+  font-size: 12px;
+  border: 1px solid rgba(60, 12, 28, 0.2);
+  border-radius: 6px;
+  background-color: #fdfaf3;
+  color: var(--skipd-text-dark);
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.skipd-handoff-input:focus {
+  border-color: var(--skipd-primary);
+  background-color: #ffffff;
+}
+
+.skipd-handoff-input.skipd-input-error {
+  border-color: #dc2626;
+  background-color: #fef2f2;
+}
+
+.skipd-handoff-error-text {
+  font-size: 10px;
+  color: #dc2626;
+  margin-top: 2px;
+}
+
+.skipd-handoff-submit-btn {
+  width: 100%;
+  padding: 7px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--skipd-accent);
+  background-color: var(--skipd-primary);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  margin-top: 4px;
+}
+
+.skipd-handoff-submit-btn:hover {
+  background-color: var(--skipd-primary-hover);
+}
+
+.skipd-handoff-summary-card {
+  background-color: #fcf9f2;
+  border: 1px solid rgba(60, 12, 28, 0.15);
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 11.5px;
+}
+
+.skipd-handoff-summary-title {
+  font-weight: 600;
+  color: var(--skipd-primary);
+  margin-bottom: 4px;
+}
+
+.skipd-handoff-summary-meta {
+  color: #4b363a;
+  line-height: 1.4;
+  margin-bottom: 6px;
+}
+
+.skipd-handoff-proto-disclaimer {
+  font-size: 10px;
+  color: #7a434d;
+  background-color: rgba(255, 230, 169, 0.4);
+  padding: 4px 6px;
+  border-radius: 4px;
+  margin-bottom: 6px;
+}
+
+.skipd-handoff-edit-btn {
+  background: transparent;
+  border: 1px solid rgba(60, 12, 28, 0.25);
+  border-radius: 4px;
+  padding: 3px 8px;
+  font-size: 11px;
+  color: var(--skipd-primary);
+  cursor: pointer;
+}
+
+.skipd-handoff-edit-btn:hover {
+  background-color: rgba(60, 12, 28, 0.05);
+}
+
+/* Quick Prompts */
+.skipd-quick-chips-wrapper {
+  padding: 6px 14px;
+  background-color: rgba(255, 248, 231, 0.95);
+  border-top: 1px solid rgba(60, 12, 28, 0.08);
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+}
+
+.skipd-quick-chips-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.skipd-chip-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  background-color: #ffffff;
+  color: var(--skipd-primary);
+  border: 1px solid rgba(60, 12, 28, 0.2);
+  border-radius: 9999px;
+  font-size: 11.5px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.skipd-chip-btn:hover {
+  background-color: var(--skipd-primary);
+  color: var(--skipd-accent);
+  border-color: var(--skipd-primary);
+}
+
+.skipd-chip-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Loading Indicator */
+.skipd-loading-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background-color: #ffffff;
+  border: 1px solid var(--skipd-border);
+  border-radius: 14px;
+  border-bottom-left-radius: 2px;
+  width: fit-content;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  font-size: 12px;
+  color: rgba(60, 12, 28, 0.7);
+  animation: skipdFadeIn 0.2s ease-out forwards;
+}
+
+.skipd-dots {
+  display: inline-flex;
+  gap: 4px;
+  margin-left: 4px;
+}
+
+.skipd-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--skipd-primary);
+  animation: skipdBounce 1.4s infinite ease-in-out both;
+}
+
+.skipd-dot:nth-child(1) { animation-delay: -0.32s; }
+.skipd-dot:nth-child(2) { animation-delay: -0.16s; }
+.skipd-dot:nth-child(3) { animation-delay: 0s; }
+
+/* Error Banner */
+.skipd-error-banner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 12px;
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #991b1b;
+  border-radius: 8px;
+  font-size: 12px;
+  line-height: 1.4;
+  margin: 4px 0;
+}
+
+.skipd-error-close {
+  background: transparent;
+  border: none;
+  color: #991b1b;
+  font-size: 16px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* Form & Input */
+.skipd-chat-form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background-color: #ffffff;
+  border-top: 1px solid rgba(60, 12, 28, 0.12);
+}
+
+.skipd-chat-input {
+  flex: 1;
+  padding: 8px 14px;
+  font-size: 13px;
+  border: 1px solid rgba(60, 12, 28, 0.2);
+  border-radius: 9999px;
+  background-color: #fcf9f2;
+  color: var(--skipd-text-dark);
+  outline: none;
+  transition: all 0.15s ease;
+}
+
+.skipd-chat-input:focus {
+  border-color: var(--skipd-primary);
+  background-color: #ffffff;
+  box-shadow: 0 0 0 2px rgba(60, 12, 28, 0.1);
+}
+
+.skipd-chat-input:disabled {
+  opacity: 0.6;
+}
+
+.skipd-send-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--skipd-primary);
+  color: var(--skipd-accent);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  flex-shrink: 0;
+}
+
+.skipd-send-btn:hover:not(:disabled) {
+  background-color: var(--skipd-primary-hover);
+  transform: scale(1.04);
+}
+
+.skipd-send-btn:active:not(:disabled) {
+  transform: scale(0.96);
+}
+
+.skipd-send-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 480px) {
+  .skipd-chat-widget-root {
+    bottom: 16px;
+    right: 16px;
+  }
+  .skipd-chat-widget-root.skipd-pos-left {
+    left: 16px;
+  }
+  .skipd-chat-window {
+    width: calc(100vw - 32px);
+    height: calc(85vh - 24px);
+    border-radius: 16px;
+  }
+}

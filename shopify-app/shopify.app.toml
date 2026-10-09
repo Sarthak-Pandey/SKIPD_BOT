@@ -1,0 +1,23 @@
+# Configuration for SKIPD Customer Support Shopify App
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "skipd_support_chat_app"
+name = "SKIPD Customer Support Bot"
+handle = "skipd-support-bot"
+application_url = "http://localhost:3000"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+
+[auth]
+redirect_urls = [
+  "http://localhost:3000/api/auth/callback"
+]
+
+[access_scopes]
+# Standard product read scope for storefront demo integration
+scopes = "read_products"
+
+[webhooks]
+api_version = "2025-01"
