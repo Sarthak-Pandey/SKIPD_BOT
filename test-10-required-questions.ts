@@ -40,7 +40,7 @@ const tests: QuestionTest[] = [
     expectedBehavior:
       "Explain Glowscreen is SPF 50+ multifunctional morning glow stick; mention hydration, protection, glow; no invented application amounts; follow verified moisturiser replacement info",
     validator: (res, status) => {
-      const lower = res.reply.toLowerCase();
+      const lower = res.reply.toLowerCase().replace(/\s+/g, " ");
       const mentionsSPF = lower.includes("spf 50+") || lower.includes("spf 50");
       const mentionsMorning = lower.includes("morning");
       const mentionsMoisturiser = lower.includes("moisturiser") || lower.includes("moisturizer") || lower.includes("replace");
