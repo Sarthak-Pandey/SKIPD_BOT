@@ -34,10 +34,12 @@
 
 @keyframes skipdBounce {
   0%, 80%, 100% {
-    transform: scale(0);
+    transform: translateY(0);
+    opacity: 0.35;
   }
   40% {
-    transform: scale(1);
+    transform: translateY(-4px);
+    opacity: 1;
   }
 }
 
@@ -223,6 +225,12 @@
   font-size: 11px;
   color: rgba(255, 230, 169, 0.85);
   font-weight: 400;
+}
+
+.skipd-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
 .skipd-close-btn {
@@ -497,7 +505,11 @@
 
 .skipd-chip-btn:disabled {
   opacity: 0.5;
-  cursor: not-allowed;
+  cursor: default;
+  pointer-events: none;
+  background-color: #ffffff;
+  color: var(--skipd-primary);
+  border-color: rgba(60, 12, 28, 0.15);
 }
 
 /* Loading Indicator */

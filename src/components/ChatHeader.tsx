@@ -17,7 +17,7 @@ export default function ChatHeader({ onClose }: ChatHeaderProps) {
         <div>
           <div className="flex items-center gap-2">
             <h2 className="font-medium text-sm text-[#FFF8E7] tracking-tight">
-              SKIPD Assistant
+              SKIPD Customer Care
             </h2>
             <span className="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse" title="Online" />
           </div>

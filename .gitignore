@@ -28,6 +28,8 @@ node_modules/
 .DS_Store
 *.pem
 Thumbs.db
+*.mp4
+*.mov
 
 # debug
 npm-debug.log*

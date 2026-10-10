@@ -36,7 +36,8 @@ function getCorsHeaders(request: NextRequest): Record<string, string> {
     return {
       "Access-Control-Allow-Origin": origin,
       "Access-Control-Allow-Methods": "POST, OPTIONS",
-      "Access-Control-Allow-Headers": "Content-Type, Authorization, X-Requested-With",
+      "Access-Control-Allow-Headers": "Content-Type, Authorization, X-Requested-With, Access-Control-Request-Private-Network",
+      "Access-Control-Allow-Private-Network": "true",
       "Access-Control-Max-Age": "86400",
       "Vary": "Origin",
     };

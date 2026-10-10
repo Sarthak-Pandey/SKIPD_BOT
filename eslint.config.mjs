@@ -17,6 +17,7 @@ const eslintConfig = defineConfig([
     "validate-knowledge.js",
     "public/**",
     "shopify-app/**",
+    ".kilo/**",
   ]),
 ]);
 

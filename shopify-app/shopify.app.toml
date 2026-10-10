@@ -1,7 +1,7 @@
 # Configuration for SKIPD Customer Support Shopify App
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
-client_id = "skipd_support_chat_app"
+client_id = "dc6675dea13b6c344349c45b7db64aef"
 name = "SKIPD Customer Support Bot"
 handle = "skipd-support-bot"
 application_url = "http://localhost:3000"
