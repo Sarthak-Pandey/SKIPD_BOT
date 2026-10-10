@@ -24,11 +24,11 @@ function getCorsHeaders(request: NextRequest): Record<string, string> {
 
   const originLower = origin.toLowerCase();
 
-  // Allow localhost / 127.0.0.1 development servers (Next.js, Shopify CLI theme dev server on 9292, etc.)
-  const isLocalDev = /^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(originLower);
+  // Allow localhost / 127.0.0.1 / LAN development servers (Next.js, Shopify CLI theme dev server on 9292, etc.)
+  const isLocalDev = /^https?:\/\/(localhost|127\.0\.0\.1|192\.168\.\d+\.\d+|10\.\d+\.\d+\.\d+)(:\d+)?$/.test(originLower);
 
-  // Allow *.myshopify.com development stores
-  const isShopifyStore = /^https:\/\/[a-zA-Z0-9-]+\.myshopify\.com$/.test(originLower);
+  // Allow *.myshopify.com and *.shopify.com (Storefronts, Theme Editor, Admin, Partners)
+  const isShopifyStore = /^https:\/\/([a-zA-Z0-9-]+\.)*(myshopify|shopify)\.com$/.test(originLower);
 
   const isCustomAllowed = customAllowed.includes(originLower);
 

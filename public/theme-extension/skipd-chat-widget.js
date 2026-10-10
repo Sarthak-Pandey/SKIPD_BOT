@@ -33,8 +33,17 @@
     }
 
     // Read merchant settings from block data attributes
-    const rawApiUrl = rootEl.getAttribute("data-api-base-url") || "http://localhost:3000";
-    const apiBaseUrl = rawApiUrl.replace(/\/+$/, "");
+    const rawApiUrl = (rootEl.getAttribute("data-api-base-url") || "").trim();
+    const isCurrentHostLocal =
+      window.location.hostname === "localhost" ||
+      window.location.hostname === "127.0.0.1" ||
+      window.location.hostname.startsWith("192.168.");
+    let apiBaseUrl = rawApiUrl.replace(/\/+$/, "");
+    if (!apiBaseUrl && isCurrentHostLocal) {
+      apiBaseUrl = "";
+    } else if (!apiBaseUrl) {
+      apiBaseUrl = "http://localhost:3000";
+    }
     const launcherText = rootEl.getAttribute("data-launcher-text") || "Chat with SKIPD";
     const greetingText =
       rootEl.getAttribute("data-greeting") ||
@@ -366,7 +375,7 @@
       const timeoutId = setTimeout(() => controller.abort(), 15000);
 
       try {
-        const targetEndpoint = `${apiBaseUrl}/api/chat`;
+        const targetEndpoint = apiBaseUrl ? `${apiBaseUrl}/api/chat` : "/api/chat";
         const response = await fetch(targetEndpoint, {
           method: "POST",
           headers: {
@@ -408,10 +417,18 @@
         if (err.name === "AbortError") {
           showError("Request timed out: The SKIPD assistant took too long to respond. Please try again.");
         } else if (err.message && err.message.includes("Failed to fetch")) {
-          showError(
-            "Unable to connect to the SKIPD assistant backend. Please ensure the backend server is running and accessible at: " +
-              apiBaseUrl
-          );
+          const isMixedContent =
+            window.location.protocol === "https:" && apiBaseUrl.startsWith("http://");
+          if (isMixedContent) {
+            showError(
+              "Unable to connect: Browser blocked insecure HTTP request from this HTTPS Shopify store (Mixed Content). To test on this store: Click the tune/lock icon in address bar → Site settings → Set 'Insecure content' to 'Allow'. Or test at http://localhost:3000/storefront-demo"
+            );
+          } else {
+            showError(
+              "Unable to connect to the SKIPD assistant backend. Please ensure the backend server is running and accessible at: " +
+                (apiBaseUrl || window.location.origin)
+            );
+          }
         } else {
           showError(err.message || "An unexpected network error occurred. Please try again.");
         }
